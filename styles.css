@@ -1,0 +1,423 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: #88725b;
+}
+
+:root {
+  --superlight: #bcc1c5;
+  --light: #88725b;
+  --dark: #302219;
+  --neutral: #a7b0b2;
+  --superdark: #080908;
+}
+
+main {
+  width: 100vw;
+  height: 110vh;
+  background-color: var(--superlight);
+}
+
+main h1 {
+  color: var(--dark);
+  font-size: 30px;
+}
+
+.profile img {
+  background-image: url("../img/GITHUB.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 8% 0 0 21%;
+  width: 29%;
+  height: 55%;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.nav-container {
+  display: inline-block;
+}
+
+.text {
+  font-size: 2em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 3px var(--dark) solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typingText 2s steps(18), cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typingText {
+  from {
+    width: 0;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 10% 0 5%;
+}
+
+.dynamic-txt {
+  margin: 0 0 1% 61%;
+  font-size: large;
+  font-weight: bold;
+  min-width: 280px;
+  color: var(--dark);
+}
+
+.dynamic-txt span {
+  position: relative;
+}
+
+.dynamic-txt span::before {
+  content: " John Lester Burce";
+  color: var(--light);
+  animation: words 20s infinite;
+}
+
+.dynamic-txt span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--superlight);
+  border-left: 2px solid var(--dark);
+  right: -8px;
+  animation: cursorWord 0.8s infinite, typingWords 20s steps(26) infinite;
+}
+
+@keyframes cursorWord {
+  to {
+    border-left: 2px solid var(--dark);
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: "John Lester Burce";
+  }
+  21%,
+  40% {
+    content: "20 Years Old";
+  }
+  41%,
+  60% {
+    content: "2nd Year College Student";
+  }
+  61%,
+  80% {
+    content: "Learning Front-End";
+  }
+  81%,
+  100% {
+    content: "Aspiring Website Developer";
+  }
+}
+
+@keyframes typingWords {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+
+.navigation-links ul {
+  background-color: var(--dark);
+  display: flex;
+  list-style-type: none;
+  border-radius: 53px;
+}
+
+.navigation-links li a {
+  color: var(--superlight);
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 54px;
+}
+
+.navigation-links a:hover {
+  color: var(--light);
+  transition: ease;
+}
+
+.navigation-links li {
+  padding: 10px 0 10px;
+}
+
+.headnav-link {
+  padding: 0%;
+}
+
+.headnav-link li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+.headnav-link li::before {
+  content: " ";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 90%;
+  width: 0;
+  height: 2px;
+  background-color: var(--superlight);
+  transition-duration: 0.5s;
+}
+
+.headnav-link li:hover::before {
+  width: 70px;
+}
+
+.row {
+  display: flex;
+}
+
+.column1 {
+  flex-basis: 85%;
+}
+
+.column1 h1 {
+  margin: 10% 0 1% 60.8%;
+  font-family: "Poppins", sans-serif;
+  color: var(--superdark);
+  font-size: 50px;
+}
+
+.column1 h3 {
+  margin: 0% 0 1% 61%;
+  font-family: "Poppins", sans-serif;
+  color: var(--superdark);
+}
+
+.column1 p {
+  margin: 0% 15% 1% 61%;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+}
+
+.column1 .firstRow {
+  margin: 0 0 0 59%;
+  font-size: 40px;
+}
+
+.column1 i {
+  padding: 0 0 0 35px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.column1 .secondRow {
+  margin: 0 0 0 58.7%;
+  color: var(--light);
+}
+
+.column1 .secondRow svg {
+  width: 39px;
+  height: 68px;
+}
+
+.column1 .secondRow i {
+  padding: 0 0 0 35px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+.column1 hr {
+  height: 1%;
+  width: 20%;
+  background-color: var(--dark);
+  margin: 0 0 0 61%;
+}
+
+.projectBTN button {
+  margin: 20px 0 0 60.9%;
+  border-radius: 30px;
+  padding: 8px;
+  width: 12%;
+  list-style-type: none;
+  background-color: var(--light);
+}
+
+.projectBTN button a {
+  text-decoration: none;
+  color: var(--superlight);
+  font-size: large;
+  font-weight: 600;
+}
+
+.projectBTN a:hover {
+  color: var(--dark);
+}
+
+footer {
+  background-color: var(--dark);
+  margin: 14% 0 0 0;
+}
+
+footer h1 {
+  color: var(--light);
+  padding: 1% 0 0 2%;
+}
+
+.footer-container {
+  width: 1140px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.footer-contacts {
+  width: 33.3%;
+}
+
+.footer-contacts h3 {
+  font-size: 23px;
+  color: var(--neutral);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.nav-links h3 {
+  font-size: 23px;
+  color: var(--neutral);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.social-links h3 {
+  font-size: 23px;
+  color: var(--neutral);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.footer-contacts p {
+  color: var(--light);
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+}
+
+.nav-links {
+  width: 33.3%;
+}
+
+.nav-links ul {
+  text-align: center;
+}
+
+.links {
+  padding: 0;
+}
+
+.links li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+.links li::before {
+  content: " ";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: var(--superlight);
+  transition-duration: 0.5s;
+}
+
+.links li:hover::before {
+  width: 70px;
+}
+
+.social-links {
+  text-align: center;
+  padding: 0%;
+  width: 35.3%;
+}
+
+.social-links li {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+.social-links i {
+  color: var(--light);
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--superlight);
+}
+
+a i:hover {
+  color: var(--superlight);
+}
+
+.social-links li:hover {
+  color: var(--superlight);
+}
+
+.bottom-bar {
+  background: var(--light);
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottom-bar p {
+  color: var(--superdark);
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+  font-weight: 600;
+}
